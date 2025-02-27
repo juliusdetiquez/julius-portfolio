@@ -1,0 +1,304 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ffcc00, #ff6600); /* Yellow to Orange gradient */
+    color: #fff;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+/* Header styling */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    animation: fadeIn 2.5s ease;
+}
+
+/* Main container */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Profile styling */
+.profile {
+    width: 40%;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#img {
+    background-image: url('image2.jpg'); /* Profile image */
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.profile h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+/* Hover effect for profile */
+.profile:hover {
+    transform: translateY(-10px);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* About Me section */
+.about-me {
+    width: 55%;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.about-me h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.about-me p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Hover effect for About Me */
+.about-me:hover {
+    transform: translateY(-10px);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Skills Section */
+.skills {
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 8px;
+    animation: fadeInUp 3s ease-out;
+}
+
+.skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills li {
+    background-color: #f0f0f0;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    position: relative;
+    width: 120px;
+    height: 80px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect for skills (expand and show tooltip inside the border) */
+.skills li:hover {
+    width: 200px;
+    height: 120px;
+    background-color: #ff6600;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* Tooltip inside the border (the expanded text) */
+.skills li::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* When hovering, reveal the tooltip inside the border */
+.skills li:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Social Media Icons Section */
+.social-media {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-media h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    -webkit-background-clip: text; /* Vendor prefix for WebKit */
+    background-clip: text; /* Standard property */
+    color: transparent;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 2em;
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff6600;
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile, .about-me {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .profile h1, .about-me h2, .skills h2, .social-media h2 {
+        font-size: 2em;
+    }
+
+    .skills li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .profile, .about-me {
+        width: 90%;
+    }
+
+    .skills li {
+        font-size: 0.9em;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
